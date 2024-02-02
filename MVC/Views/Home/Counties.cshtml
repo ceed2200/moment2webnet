@@ -1,0 +1,16 @@
+@model List<string>
+
+@{
+    ViewData["Title"] = "Landskap";
+}
+
+<div>
+    <h1>Landskap</h1>
+    <p>Här presenteras Sveriges landskap.</p>
+    <!-- listan med landskap loopas igenom -->
+    <ul>
+        @foreach (var county in Model) {
+            <li>@county</li>
+        }
+    </ul>
+</div>

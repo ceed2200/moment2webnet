@@ -1,0 +1,16 @@
+﻿@model List<MVC.Models.CityModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h1>Städer i Sverige</h1>
+    <p>På denna webbplats kan du se en lista på @ViewBag.tellAmount lagrade städer och dess tillhörande landskap, samt lägga till nya genom sidan "Lägg till stad".</p><br>
+    <!-- listan med städer loopas igenom -->
+    <ul>
+        @foreach (var city in Model) {
+            <li>@city.name som ligger i @city.county</li>
+        }
+    </ul>
+</div>

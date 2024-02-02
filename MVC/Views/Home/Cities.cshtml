@@ -1,0 +1,25 @@
+@model MVC.Models.CityModel;
+
+@{
+    ViewData["Title"] = "Lägg till stad";
+
+}
+
+<div>
+    <h1>Lägg till stad</h1>
+
+    <p>Här kan du fylla i en till stad till listan.</p><br>
+
+    <!-- Formulär för att lägga till en stad till listan -->
+    <form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <label asp-for="name"></label><br>
+    <input asp-for="name"/>
+    <span asp-validation-for="name" style="color:red"></span><br><br>
+    <label asp-for="county"></label><br>
+    <input asp-for="county"/>
+    <span asp-validation-for="county" style="color:red"></span><br><br>
+    <input type="submit" value="Lagra staden"/><br>
+    </form><br><br>
+</div>
